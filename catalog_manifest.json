@@ -1,0 +1,66 @@
+{
+  "release_type": "public_review_copy",
+  "direct_listening_completed": false,
+  "episodes": [
+    {
+      "episode": 1,
+      "src": "media/EP01.mp4",
+      "bytes": 18369278,
+      "sha256": "13dcec513efbe854a5c6f5b11a70bfde1251d77916ee04fc66bb29ea0423478d"
+    },
+    {
+      "episode": 2,
+      "src": "media/EP02.mp4",
+      "bytes": 12659857,
+      "sha256": "0c7fbd14541fa1704683d18e077509b6e2859e36014dfe393b24f9450ce25aec"
+    },
+    {
+      "episode": 3,
+      "src": "media/EP03.mp4",
+      "bytes": 18229598,
+      "sha256": "0ea52487cd7301a4dd7bab21c97b69858a4282d433cc7e2046cec5551741d37f"
+    },
+    {
+      "episode": 4,
+      "src": "media/EP04.mp4",
+      "bytes": 18921490,
+      "sha256": "07cea302ad99450c404648b26b4a9c44a9d25b3e362517ae79e10b202ead4c0a"
+    },
+    {
+      "episode": 5,
+      "src": "media/EP05.mp4",
+      "bytes": 14733923,
+      "sha256": "258bdf258ed5d5b94481754ba891f66096ab452492769927589ecaf788399fc2"
+    },
+    {
+      "episode": 6,
+      "src": "media/EP06.mp4",
+      "bytes": 22846777,
+      "sha256": "3dc04a1341fb963166b39962a9001d4af5c915a6c2c04f1238e0fce871400089"
+    },
+    {
+      "episode": 7,
+      "src": "media/EP07.mp4",
+      "bytes": 18248535,
+      "sha256": "5f385b7716ae0eaf771d2d5b3e0a878edabdd97b88dbe7318016231d2589f850"
+    },
+    {
+      "episode": 8,
+      "src": "media/EP08.mp4",
+      "bytes": 15773711,
+      "sha256": "6642aef77c194781d4910b1f964080da849fc8c0ad4208bfb1a2b8d1c6c42300"
+    },
+    {
+      "episode": 9,
+      "src": "media/EP09.mp4",
+      "bytes": 13609901,
+      "sha256": "f5a47b89d97ba5921b7fd7b3640dbe2e71c2b4086a36c510e8b7380c780c833a"
+    },
+    {
+      "episode": 10,
+      "src": "media/EP10.mp4",
+      "bytes": 16799238,
+      "sha256": "7a92b0b25fc3aebd6620ee399e998b41accbb144214d89d5fe91bfe5110bb9f7"
+    }
+  ]
+}

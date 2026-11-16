@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>공개 검토본 · 아랍어/한국어 10편</title>
+<style>
+:root{--navy:#0f1d3a;--navy2:#172a52;--gold:#c9a24a;--gold2:#e6cf8f;--paper:#f7f3ea;--ink:#1b2236;--muted:#6b7286}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;line-height:1.5}
+.notice{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;border-bottom:3px solid var(--gold);padding:10px 16px;text-align:center}
+.notice b{color:var(--gold2);letter-spacing:.04em}
+.notice small{display:block;margin-top:4px;font-size:12px;color:#cfd5e4}
+header{max-width:1100px;margin:0 auto;padding:36px 20px 8px}
+.kicker{font-size:12px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:700}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(26px,4vw,40px);margin:6px 0 4px;color:var(--navy)}
+.rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:16px 0}
+.stage{max-width:1100px;margin:0 auto;padding:0 20px}
+.player{background:var(--navy);color:#fff;border-radius:4px;padding:16px;display:grid;gap:12px}
+.slot{aspect-ratio:16/9;background:#081128;display:flex;align-items:center;justify-content:center;color:#8d97b3;font-size:14px}
+.slot video{width:100%;height:100%;background:#000}
+.ptitle .ar{font-size:clamp(20px,3vw,28px);color:var(--gold2)}
+.ptitle .ko{font-size:15px;color:#dfe4f0}
+.ar{font-family:"Geeza Pro","Noto Naskh Arabic","Arial",serif;text-align:right}
+main{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
+h2{font-family:Georgia,serif;font-weight:400;color:var(--navy);font-size:22px;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
+.card{background:#fff;border:1px solid #e3dccb;border-top:3px solid var(--navy);padding:14px;display:flex;flex-direction:column;gap:8px}
+.card.on{border-top-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset}
+.ep{font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--gold)}
+.card .ar{font-size:19px;color:var(--navy);min-height:2.2em}
+
+.card .ko{font-size:14px;color:var(--muted)}
+.vbox{aspect-ratio:16/9;background:#0b1530}
+.vbox video{width:100%;height:100%;display:block;background:#000}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.chip{font-size:11px;padding:2px 8px;border:1px solid var(--gold);color:#8a6b22;border-radius:20px}
+button{font:inherit;font-size:13px;border:1px solid var(--navy);background:transparent;color:var(--navy);padding:6px 12px;cursor:pointer}
+button:hover,button:focus-visible{background:var(--navy);color:#fff;outline:none}
+footer{text-align:center;font-size:12px;color:var(--muted);padding:0 20px 40px}
+@media (max-width:600px){header{padding-top:24px}.grid{grid-template-columns:1fr}.notice small{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="notice" role="status"><b>공개 검토본 · 아랍어 직접 청취 미완료 · 최종 청취 승인 대기</b>
+<small>기술 검증: 전체 decode 10/10 · SHA-256 10/10 통과 — 발음·억양·의미·믹스 청취 승인은 미완료 · 시각 샘플 확인은 전체 재생 확인이 아닙니다</small></div>
+
+<header>
+<div class="kicker">Public Review · Arabic / Korean</div>
+<h1>예수님을 알아가는 10가지 이야기</h1>
+<div style="color:var(--muted);font-size:14px">카드를 골라 위 플레이어에서 크게 볼 수 있습니다. 공개 검토용입니다. 아랍어 직접 청취 및 최종 승인은 아직 완료되지 않았습니다.</div>
+<div class="rule"></div>
+</header>
+
+<section class="stage" aria-label="선택한 영상 플레이어">
+<div class="player">
+<div class="slot" id="slot">아래 목록에서 회차를 선택하세요</div>
+<div class="ptitle"><div class="ar" dir="rtl" lang="ar" id="pAr"></div><div class="ko" id="pKo"></div></div>
+</div>
+</section>
+
+<main>
+<h2>Explore · 전체 회차</h2>
+<div class="grid" id="grid">
+
+<article class="card" data-ep="1"><div class="ep">EP 01</div><div class="ar" dir="rtl" lang="ar">الميلاد: المحبة تأتي إلينا</div><div class="ko">크리스마스, 사랑이 우리에게 오다</div><div class="vbox"><video poster="thumbnails/EP01.jpg" src="media/EP01.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="2"><div class="ep">EP 02</div><div class="ar" dir="rtl" lang="ar">الكنيسة: أيُّ مكانٍ هي؟</div><div class="ko">교회는 어떤 곳일까요?</div><div class="vbox"><video poster="thumbnails/EP02.jpg" src="media/EP02.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="3"><div class="ep">EP 03</div><div class="ar" dir="rtl" lang="ar">مَن هو يسوع؟</div><div class="ko">예수님은 누구일까요?</div><div class="vbox"><video poster="thumbnails/EP03.jpg" src="media/EP03.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="4"><div class="ep">EP 04</div><div class="ar" dir="rtl" lang="ar">محبةٌ لا تُكسَب بالإنجاز</div><div class="ko">성과로 얻지 않는 사랑</div><div class="vbox"><video poster="thumbnails/EP04.jpg" src="media/EP04.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="5"><div class="ep">EP 05</div><div class="ar" dir="rtl" lang="ar">الخطيئة ليست مجرّد فعلٍ سيّئ</div><div class="ko">죄는 나쁜 행동만이 아닙니다</div><div class="vbox"><video poster="thumbnails/EP05.jpg" src="media/EP05.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="6"><div class="ep">EP 06</div><div class="ar" dir="rtl" lang="ar">الصليب والغفران</div><div class="ko">십자가와 용서</div><div class="vbox"><video poster="thumbnails/EP06.jpg" src="media/EP06.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="7"><div class="ep">EP 07</div><div class="ar" dir="rtl" lang="ar">رجاء القيامة</div><div class="ko">부활이 주는 소망</div><div class="vbox"><video poster="thumbnails/EP07.jpg" src="media/EP07.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="8"><div class="ep">EP 08</div><div class="ar" dir="rtl" lang="ar">الصلاة ليست تعويذة</div><div class="ko">기도는 주문이 아닙니다</div><div class="vbox"><video poster="thumbnails/EP08.jpg" src="media/EP08.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="9"><div class="ep">EP 09</div><div class="ar" dir="rtl" lang="ar">مع الإيمان، تبقى الصعوبات</div><div class="ko">믿음이 있어도 어려움은 있습니다</div><div class="vbox"><video poster="thumbnails/EP09.jpg" src="media/EP09.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+<article class="card" data-ep="10"><div class="ep">EP 10</div><div class="ar" dir="rtl" lang="ar">من أين أبدأ في التعرّف إلى يسوع؟</div><div class="ko">예수님을 어디서부터 알아갈까요?</div><div class="vbox"><video poster="thumbnails/EP10.jpg" src="media/EP10.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
+</div>
+</main>
+<footer>공개 검토용 · 아랍어 원어민 청취 검수 및 최종 승인 전</footer>
+
+<script>
+(function(){
+  var slot=document.getElementById('slot'),pAr=document.getElementById('pAr'),pKo=document.getElementById('pKo'),cur=null;
+  function select(card){
+    if(cur===card)return;
+    if(cur){var v0=slot.querySelector('video');v0.pause();var b0=cur.querySelector('.vbox');b0.textContent='';b0.appendChild(v0);cur.classList.remove('on');cur.querySelector('button').textContent='플레이어에서 보기';}
+    var box=card.querySelector('.vbox'),v=box.querySelector('video');slot.textContent='';slot.appendChild(v);
+    box.innerHTML='<div class="slot" style="height:100%">위 플레이어에서 재생 중</div>';
+    card.classList.add('on');card.querySelector('button').textContent='선택됨';
+    pAr.textContent=card.querySelector('.ar').textContent;pKo.textContent='EP '+card.dataset.ep+' · '+card.querySelector('.ko').textContent;
+    cur=card;slot.scrollIntoView({behavior:'smooth',block:'center'});
+  }
+  document.querySelectorAll('.card').forEach(function(c){c.querySelector('button').addEventListener('click',function(){select(c);});});
+  document.addEventListener('play',function(e){document.querySelectorAll('video').forEach(function(v){if(v!==e.target)v.pause();});},true);
+})();
+</script>
+</body>
+</html>
