@@ -1,97 +1,743 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>공개 검토본 · 아랍어/한국어 10편</title>
+<meta name="description" content="عشرة أفلامٍ قصيرة تتناول أسئلةً صادقة عن يسوع والإيمان المسيحي: الميلاد والكنيسة والخطيئة والصليب والقيامة والصلاة والألم.">
+<meta name="theme-color" content="#14213d">
+<title>تعرّف إلى يسوع | عشرة أفلامٍ قصيرة</title>
 <style>
-:root{--navy:#0f1d3a;--navy2:#172a52;--gold:#c9a24a;--gold2:#e6cf8f;--paper:#f7f3ea;--ink:#1b2236;--muted:#6b7286}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:"Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",system-ui,sans-serif;line-height:1.5}
-.notice{position:sticky;top:0;z-index:10;background:var(--navy);color:#fff;border-bottom:3px solid var(--gold);padding:10px 16px;text-align:center}
-.notice b{color:var(--gold2);letter-spacing:.04em}
-.notice small{display:block;margin-top:4px;font-size:12px;color:#cfd5e4}
-header{max-width:1100px;margin:0 auto;padding:36px 20px 8px}
-.kicker{font-size:12px;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;font-weight:700}
-h1{font-family:Georgia,"Times New Roman",serif;font-weight:400;font-size:clamp(26px,4vw,40px);margin:6px 0 4px;color:var(--navy)}
-.rule{height:1px;background:linear-gradient(90deg,var(--gold),transparent);margin:16px 0}
-.stage{max-width:1100px;margin:0 auto;padding:0 20px}
-.player{background:var(--navy);color:#fff;border-radius:4px;padding:16px;display:grid;gap:12px}
-.slot{aspect-ratio:16/9;background:#081128;display:flex;align-items:center;justify-content:center;color:#8d97b3;font-size:14px}
-.slot video{width:100%;height:100%;background:#000}
-.ptitle .ar{font-size:clamp(20px,3vw,28px);color:var(--gold2)}
-.ptitle .ko{font-size:15px;color:#dfe4f0}
-.ar{font-family:"Geeza Pro","Noto Naskh Arabic","Arial",serif;text-align:right}
-main{max-width:1100px;margin:0 auto;padding:24px 20px 60px}
-h2{font-family:Georgia,serif;font-weight:400;color:var(--navy);font-size:22px;margin:0 0 14px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px}
-.card{background:#fff;border:1px solid #e3dccb;border-top:3px solid var(--navy);padding:14px;display:flex;flex-direction:column;gap:8px}
-.card.on{border-top-color:var(--gold);box-shadow:0 0 0 2px var(--gold) inset}
-.ep{font-size:12px;font-weight:700;letter-spacing:.15em;color:var(--gold)}
-.card .ar{font-size:19px;color:var(--navy);min-height:2.2em}
+  :root {
+    --navy: #14213d;
+    --navy-2: #1f3160;
+    --gold: #b8892b;
+    --gold-light: #e3c27a;
+    --gold-ink: #7a5a14;
+    --paper: #f7f3ea;
+    --card: #fffdf8;
+    --ink: #1d2433;
+    --muted: #4f5869;
+    --line: #e2d9c5;
+    --danger: #a3261d;
+    --danger-bg: #fbeceb;
+    --radius: 12px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: "Geeza Pro", Tahoma, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--ink);
+    background: var(--paper);
+    overflow-wrap: anywhere;
+  }
+  img, video { max-width: 100%; display: block; }
+  button, input { font: inherit; }
+  :focus-visible {
+    outline: 3px solid var(--navy);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px var(--gold-light);
+  }
+  .visually-hidden {
+    position: absolute !important;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0);
+    white-space: nowrap; border: 0;
+  }
+  .skip-link {
+    position: absolute;
+    inset-inline-start: 1rem;
+    top: -100px;
+    z-index: 10;
+    padding: .6rem 1rem;
+    min-height: 44px;
+    background: var(--gold-light);
+    color: var(--navy);
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+  .skip-link:focus { top: 1rem; }
+  .wrap {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
 
-.card .ko{font-size:14px;color:var(--muted)}
-.vbox{aspect-ratio:16/9;background:#0b1530}
-.vbox video{width:100%;height:100%;display:block;background:#000}
-.row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
-.chip{font-size:11px;padding:2px 8px;border:1px solid var(--gold);color:#8a6b22;border-radius:20px}
-button{font:inherit;font-size:13px;border:1px solid var(--navy);background:transparent;color:var(--navy);padding:6px 12px;cursor:pointer}
-button:hover,button:focus-visible{background:var(--navy);color:#fff;outline:none}
-footer{text-align:center;font-size:12px;color:var(--muted);padding:0 20px 40px}
-@media (max-width:600px){header{padding-top:24px}.grid{grid-template-columns:1fr}.notice small{font-size:11px}}
+  /* الترويسة */
+  .site-header {
+    background: var(--navy);
+    color: #fff;
+    border-bottom: 4px solid var(--gold);
+    padding: 1.75rem 0 1.5rem;
+  }
+  .site-header .kicker {
+    margin: 0 0 .25rem;
+    color: var(--gold-light);
+    font-size: .95rem;
+    font-weight: 700;
+  }
+  .site-header h1 {
+    margin: 0 0 .5rem;
+    font-size: clamp(1.6rem, 6vw, 2.3rem);
+    line-height: 1.4;
+  }
+  .site-header .intro {
+    margin: 0;
+    max-width: 60ch;
+    color: #e9edf5;
+  }
+
+  main { padding: 1.25rem 0 2rem; }
+
+  /* المشغّل */
+  .player-section { scroll-margin-top: .75rem; }
+  .frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(20, 33, 61, .18);
+  }
+  @supports not (aspect-ratio: 16 / 9) {
+    .frame { height: 0; padding-top: 56.25%; }
+  }
+  .frame video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+  }
+  .controls {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+    margin-top: .75rem;
+  }
+  .btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: .45rem .6rem;
+    border: 1.5px solid var(--navy);
+    border-radius: 10px;
+    background: var(--card);
+    color: var(--navy);
+    font-weight: 700;
+    line-height: 1.35;
+    cursor: pointer;
+    white-space: normal;
+  }
+  .btn:hover:not(:disabled) { background: #efe8d6; }
+  .btn-primary {
+    background: var(--navy);
+    color: #fff;
+  }
+  .btn-primary:hover:not(:disabled) { background: var(--navy-2); }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+
+  .notice {
+    margin-top: .75rem;
+    padding: .75rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--gold);
+    background: #fbf3df;
+    color: var(--ink);
+  }
+  .notice p { margin: 0; }
+  .error-box {
+    margin-top: .75rem;
+    padding: .85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid var(--danger);
+    background: var(--danger-bg);
+    color: #3d0f0b;
+  }
+  .error-box p { margin: 0 0 .6rem; }
+
+  .now-playing {
+    margin-top: 1rem;
+    padding: 1rem 1.1rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-inline-start: 4px solid var(--gold);
+    border-radius: var(--radius);
+  }
+  .now-playing .label {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--gold-ink);
+  }
+  .now-playing h2 {
+    margin: .15rem 0 .35rem;
+    font-size: clamp(1.2rem, 4.8vw, 1.5rem);
+    line-height: 1.5;
+    color: var(--navy);
+  }
+  .now-playing p.desc { margin: 0; color: var(--ink); }
+
+  /* القائمة والبحث */
+  .episodes-section { margin-top: 2rem; }
+  .section-title {
+    margin: 0 0 .25rem;
+    font-size: 1.35rem;
+    color: var(--navy);
+  }
+  .instructions { margin: 0 0 1rem; color: var(--muted); }
+  .search {
+    padding: 1rem;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+  }
+  .search label {
+    display: block;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: .35rem;
+  }
+  .search input {
+    width: 100%;
+    min-height: 48px;
+    padding: .5rem .85rem;
+    border: 1.5px solid #b9b19f;
+    border-radius: 10px;
+    background: #fff;
+    color: var(--ink);
+  }
+  .search input:focus-visible { border-color: var(--navy); }
+  .search .hint { margin: .4rem 0 0; font-size: .9rem; color: var(--muted); }
+  .result-count { margin: .5rem 0 0; font-weight: 700; color: var(--navy); }
+  .search-error { margin: .5rem 0 0; color: var(--danger); font-weight: 700; }
+  .no-results {
+    padding: 1rem;
+    border: 1px dashed var(--gold);
+    border-radius: var(--radius);
+    background: #fbf3df;
+    margin: 0 0 1rem;
+  }
+
+  .episode-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+    gap: 1rem;
+  }
+  .episode-list > li { min-width: 0; }
+  .card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    min-height: 44px;
+    padding: 0;
+    text-align: start;
+    background: var(--card);
+    color: var(--ink);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+  .card:hover { border-color: var(--gold); }
+  .card[aria-pressed="true"] {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px var(--gold), 0 6px 16px rgba(20, 33, 61, .14);
+  }
+  .card .thumb-wrap {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: var(--navy);
+  }
+  .card .thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .card .badge {
+    display: none;
+    position: absolute;
+    top: .5rem;
+    inset-inline-start: .5rem;
+    padding: .1rem .6rem;
+    border-radius: 999px;
+    background: var(--gold-light);
+    color: var(--navy);
+    font-size: .85rem;
+    font-weight: 700;
+  }
+  .card[aria-pressed="true"] .badge { display: inline-block; }
+  .card .body { display: block; padding: .75rem .9rem 1rem; }
+  .card .ep-num {
+    display: block;
+    font-size: .88rem;
+    font-weight: 700;
+    color: var(--gold-ink);
+  }
+  .card .card-title {
+    display: block;
+    margin: .1rem 0 .35rem;
+    font-size: 1.08rem;
+    font-weight: 700;
+    line-height: 1.55;
+    color: var(--navy);
+  }
+  .card .card-desc {
+    display: block;
+    font-size: .95rem;
+    line-height: 1.75;
+    color: var(--muted);
+  }
+
+  .site-footer {
+    background: var(--navy);
+    color: #e9edf5;
+    border-top: 4px solid var(--gold);
+    padding: 1.25rem 0;
+    text-align: center;
+  }
+  .site-footer p { margin: .2rem 0; }
+  .site-footer .signature { color: var(--gold-light); font-weight: 700; }
+
+  @media (min-width: 900px) {
+    .player-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
+      gap: 1.25rem;
+      align-items: start;
+    }
+    .now-playing { margin-top: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; scroll-behavior: auto !important; }
+  }
 </style>
 </head>
 <body>
-<div class="notice" role="status"><b>공개 검토본 · 아랍어 직접 청취 미완료 · 최종 청취 승인 대기</b>
-<small>기술 검증: 전체 decode 10/10 · SHA-256 10/10 통과 — 발음·억양·의미·믹스 청취 승인은 미완료 · 시각 샘플 확인은 전체 재생 확인이 아닙니다</small></div>
+<a class="skip-link" href="#player-section">انتقل إلى المشغّل</a>
 
-<header>
-<div class="kicker">Public Review · Arabic / Korean</div>
-<h1>예수님을 알아가는 10가지 이야기</h1>
-<div style="color:var(--muted);font-size:14px">카드를 골라 위 플레이어에서 크게 볼 수 있습니다. 공개 검토용입니다. 아랍어 직접 청취 및 최종 승인은 아직 완료되지 않았습니다.</div>
-<div class="rule"></div>
+<header class="site-header">
+  <div class="wrap">
+    <p class="kicker">سلسلة أفلامٍ قصيرة</p>
+    <h1>تعرّف إلى يسوع</h1>
+    <p class="intro">عشرة أفلامٍ قصيرة تتناول أسئلةً صادقة عن يسوع والإيمان المسيحي: الميلاد والكنيسة والخطيئة والصليب والقيامة والصلاة والألم. اختر فيلمًا من القائمة ليُعرض في المشغّل، وشاهده على مهل.</p>
+  </div>
 </header>
 
-<section class="stage" aria-label="선택한 영상 플레이어">
-<div class="player">
-<div class="slot" id="slot">아래 목록에서 회차를 선택하세요</div>
-<div class="ptitle"><div class="ar" dir="rtl" lang="ar" id="pAr"></div><div class="ko" id="pKo"></div></div>
-</div>
-</section>
+<main id="main">
+  <div class="wrap">
+    <section id="player-section" class="player-section" aria-label="المشغّل الرئيسي" tabindex="-1">
+      <div class="player-grid">
+        <div>
+          <div class="frame">
+            <video id="player" controls playsinline preload="metadata"
+                   src="media/EP01.mp4" poster="thumbnails/EP01.jpg"
+                   aria-label="الفيلم المعروض: الميلاد: المحبة تأتي إلينا">
+              متصفّحك لا يدعم تشغيل الفيديو.
+            </video>
+          </div>
 
-<main>
-<h2>Explore · 전체 회차</h2>
-<div class="grid" id="grid">
+          <div class="controls" role="group" aria-label="التحكّم في التشغيل والتنقّل بين الحلقات">
+            <button type="button" class="btn" id="prev-btn" disabled>الحلقة السابقة</button>
+            <button type="button" class="btn btn-primary" id="play-btn">تشغيل</button>
+            <button type="button" class="btn" id="next-btn">الحلقة التالية</button>
+          </div>
 
-<article class="card" data-ep="1"><div class="ep">EP 01</div><div class="ar" dir="rtl" lang="ar">الميلاد: المحبة تأتي إلينا</div><div class="ko">크리스마스, 사랑이 우리에게 오다</div><div class="vbox"><video poster="thumbnails/EP01.jpg" src="media/EP01.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="2"><div class="ep">EP 02</div><div class="ar" dir="rtl" lang="ar">الكنيسة: أيُّ مكانٍ هي؟</div><div class="ko">교회는 어떤 곳일까요?</div><div class="vbox"><video poster="thumbnails/EP02.jpg" src="media/EP02.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="3"><div class="ep">EP 03</div><div class="ar" dir="rtl" lang="ar">مَن هو يسوع؟</div><div class="ko">예수님은 누구일까요?</div><div class="vbox"><video poster="thumbnails/EP03.jpg" src="media/EP03.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="4"><div class="ep">EP 04</div><div class="ar" dir="rtl" lang="ar">محبةٌ لا تُكسَب بالإنجاز</div><div class="ko">성과로 얻지 않는 사랑</div><div class="vbox"><video poster="thumbnails/EP04.jpg" src="media/EP04.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="5"><div class="ep">EP 05</div><div class="ar" dir="rtl" lang="ar">الخطيئة ليست مجرّد فعلٍ سيّئ</div><div class="ko">죄는 나쁜 행동만이 아닙니다</div><div class="vbox"><video poster="thumbnails/EP05.jpg" src="media/EP05.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="6"><div class="ep">EP 06</div><div class="ar" dir="rtl" lang="ar">الصليب والغفران</div><div class="ko">십자가와 용서</div><div class="vbox"><video poster="thumbnails/EP06.jpg" src="media/EP06.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="7"><div class="ep">EP 07</div><div class="ar" dir="rtl" lang="ar">رجاء القيامة</div><div class="ko">부활이 주는 소망</div><div class="vbox"><video poster="thumbnails/EP07.jpg" src="media/EP07.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="8"><div class="ep">EP 08</div><div class="ar" dir="rtl" lang="ar">الصلاة ليست تعويذة</div><div class="ko">기도는 주문이 아닙니다</div><div class="vbox"><video poster="thumbnails/EP08.jpg" src="media/EP08.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="9"><div class="ep">EP 09</div><div class="ar" dir="rtl" lang="ar">مع الإيمان، تبقى الصعوبات</div><div class="ko">믿음이 있어도 어려움은 있습니다</div><div class="vbox"><video poster="thumbnails/EP09.jpg" src="media/EP09.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-<article class="card" data-ep="10"><div class="ep">EP 10</div><div class="ar" dir="rtl" lang="ar">من أين أبدأ في التعرّف إلى يسوع؟</div><div class="ko">예수님을 어디서부터 알아갈까요?</div><div class="vbox"><video poster="thumbnails/EP10.jpg" src="media/EP10.mp4" controls playsinline preload="metadata"></video></div><div class="row"><span class="chip">청취 승인 미완료</span><button type="button">플레이어에서 보기</button></div></article>
-</div>
+          <div class="notice" id="play-hint" aria-live="polite" hidden>
+            <p>لم يسمح المتصفّح ببدء التشغيل تلقائيًّا. اضغط زر التشغيل ▶ داخل المشغّل لمشاهدة الحلقة.</p>
+          </div>
+
+          <div class="error-box" id="error-box" role="alert" hidden>
+            <p>تعذّر تحميل هذه الحلقة. تحقّق من اتصالك بالإنترنت ثم أعد المحاولة.</p>
+            <button type="button" class="btn btn-primary" id="retry-btn">إعادة المحاولة</button>
+          </div>
+        </div>
+
+        <div class="now-playing" id="now-playing">
+          <p class="label"><span>يُعرض الآن</span> · <span id="np-count">الحلقة ١ من ١٠</span></p>
+          <h2 id="np-title">الميلاد: المحبة تأتي إلينا</h2>
+          <p class="desc" id="np-desc">يتأمّل الفيلم عيد الميلاد بوصفه تذكارًا لميلاد يسوع في مذودٍ متواضعٍ ببيت لحم، علامةً على محبة الله التي اقتربت من الوحيدين والمتعبين. ويتحدّث عن الصليب والقيامة ورجاء بدايةٍ جديدة، ويدعو بلطفٍ إلى التعرّف إلى يسوع.</p>
+        </div>
+      </div>
+      <p class="visually-hidden" id="status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="episodes-section" aria-labelledby="episodes-heading">
+      <h2 class="section-title" id="episodes-heading">الحلقات</h2>
+      <p class="instructions" id="episodes-instructions">اضغط على بطاقة أي حلقة لعرضها في المشغّل الرئيسي، أو استخدم زرَّي «الحلقة السابقة» و«الحلقة التالية» للتنقّل بين الحلقات.</p>
+
+      <div class="search" role="search">
+        <label for="search-input">ابحث في الحلقات</label>
+        <input type="search" id="search-input" autocomplete="off" spellcheck="false"
+               placeholder="مثلًا: الصليب، الصلاة، القيامة"
+               aria-describedby="search-hint result-count">
+        <p class="hint" id="search-hint">يبحث في عناوين الحلقات وأوصافها، ولا يتأثّر بالتشكيل أو بأشكال الهمزة.</p>
+        <p class="result-count" id="result-count" role="status" aria-live="polite">تُعرض جميع الحلقات (١٠)</p>
+        <p class="search-error" id="search-error" role="alert" hidden>تعذّر إجراء البحث الآن. حاول مرّةً أخرى.</p>
+      </div>
+
+      <p class="no-results" id="no-results" hidden>لا توجد حلقات تطابق بحثك. جرّب كلمةً أخرى أو امسح خانة البحث لعرض جميع الحلقات.</p>
+
+      <ul class="episode-list" id="episode-list" aria-describedby="episodes-instructions">
+        <li>
+          <button type="button" class="card" data-ep="1" aria-pressed="true">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP01.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ١</span>
+              <span class="card-title">الميلاد: المحبة تأتي إلينا</span>
+              <span class="card-desc">يتأمّل الفيلم عيد الميلاد بوصفه تذكارًا لميلاد يسوع في مذودٍ متواضعٍ ببيت لحم، علامةً على محبة الله التي اقتربت من الوحيدين والمتعبين. ويتحدّث عن الصليب والقيامة ورجاء بدايةٍ جديدة، ويدعو بلطفٍ إلى التعرّف إلى يسوع.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="2" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP02.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٢</span>
+              <span class="card-title">الكنيسة: أيُّ مكانٍ هي؟</span>
+              <span class="card-desc">الكنيسة ليست مبنى ولا جماعةً من الكاملين، بل أناسٌ يؤمنون بيسوع ويتعلّمون اتّباعه بالعبادة وقراءة الكتاب المقدس والصلاة والعناية بالجيران. تعالَ بجراحك وأسئلتك، فالخلاص بنعمة يسوع لا بفضل حضور الكنيسة.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="3" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP03.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٣</span>
+              <span class="card-title">مَن هو يسوع؟</span>
+              <span class="card-desc">يؤمن المسيحيون أن يسوع ابن الله والمخلّص، لا بمعنى تناسلٍ جسدي، بل بعلاقةٍ فريدةٍ بالله الآب يعرّفنا من خلالها بالله. حمل الصليب وقام من بين الأموات ليفتح طريق المصالحة، ويدعوك الفيلم إلى قراءة مقطعٍ قصيرٍ من الأناجيل بأسئلتك الصادقة.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="4" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP04.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٤</span>
+              <span class="card-title">محبةٌ لا تُكسَب بالإنجاز</span>
+              <span class="card-desc">محبة الله ليست جائزةً للمتفوّقين، بل نعمةٌ مجانيةٌ ظهرت في حمل يسوع الصليب لأجل الخطاة. وهي لا تعني الموافقة على كل تصرّف ولا التخلّي عن المسؤولية، بل تدعو إلى الاعتراف بالأخطاء والإيمان بيسوع وتعلّم حياةٍ جديدة.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="5" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP05.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٥</span>
+              <span class="card-title">الخطيئة ليست مجرّد فعلٍ سيّئ</span>
+              <span class="card-desc">الخطيئة في الكتاب المقدس ليست الشرور الكبيرة فحسب، بل قلبٌ يبتعد عن الله الذي خلقنا ويجعل الذات مركز الحياة. والاعتراف بها لا يعني أنك بلا قيمة، فقد جاء يسوع ليمنح الغفران ويعيدنا إلى الله.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="6" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP06.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٦</span>
+              <span class="card-title">الصليب والغفران</span>
+              <span class="card-desc">يؤمن المسيحيون أن يسوع الذي بلا خطيئة مات طوعًا لأجل خطايانا، فأظهر الله على الصليب عدله ومحبته العميقة للخطاة، وبالقيامة لم يعد الموت هو النهاية. ومن يتوب ويتّكل عليه ينال الغفران، لا بترديد عبارةٍ ما، ويتعلّم إصلاح ما أفسده والسير في حياةٍ جديدة.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="7" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP07.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٧</span>
+              <span class="card-title">رجاء القيامة</span>
+              <span class="card-desc">يؤمن المسيحيون أن يسوع مات حقًّا ثم قام من الموت حقًّا، وتروي الأناجيل أن التلاميذ رأوه بعد قيامته. هذا الرجاء لا يمحو الحزن والفقد، لكنه يعني أن ليس للخطيئة والموت الكلمة الأخيرة، وأن الله لم يتخلَّ عن خليقته.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="8" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP08.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٨</span>
+              <span class="card-title">الصلاة ليست تعويذة</span>
+              <span class="card-desc">الصلاة ليست تعويذةً للتحكّم في النتائج، بل حوارٌ صادقٌ نفتح فيه قلوبنا لله ونتعلّم الثقة به، وقد يختلف جوابه عن توقّعاتنا. ويقترح الفيلم كلماتٍ بسيطة لبدء الصلاة، لا بوصفها صيغةً تضمن الخلاص، بل بدايةً لبحثٍ جادٍّ عن الله.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="9" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP09.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ٩</span>
+              <span class="card-title">مع الإيمان، تبقى الصعوبات</span>
+              <span class="card-desc">الإيمان بيسوع لا يَعِد بحياةٍ بلا ألم، والصعوبات لا تعني بالضرورة ضعف الإيمان ولا عقابًا من الله. يسوع نفسه تألّم ولا يراقب دموعنا من بعيد، وطلب العون والرعاية الطبية والدعم المتخصّص ليس فشلًا في الإيمان.</span>
+            </span>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="card" data-ep="10" aria-pressed="false">
+            <span class="thumb-wrap"><img class="thumb" src="thumbnails/EP10.jpg" alt="" width="320" height="180" loading="lazy" decoding="async"><span class="badge" aria-hidden="true">يُعرض الآن</span></span>
+            <span class="body">
+              <span class="ep-num">الحلقة ١٠</span>
+              <span class="card-title">من أين أبدأ في التعرّف إلى يسوع؟</span>
+              <span class="card-desc">خطواتٌ عملية للبداية: اقرأ مقطعًا قصيرًا من الأناجيل مثل إنجيل مرقس، ودوّن أسئلتك، وصلِّ بصدق، وابحث عن كنيسةٍ تشرح الكتاب المقدس بجدّية. فالإيمان ليس إتمام إجراءات ولا صلاةً ثابتة تضمن الخلاص، بل توبةٌ وثقةٌ بيسوع واتّباعٌ له في الحياة الحقيقية.</span>
+            </span>
+          </button>
+        </li>
+      </ul>
+    </section>
+  </div>
 </main>
-<footer>공개 검토용 · 아랍어 원어민 청취 검수 및 최종 승인 전</footer>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>«تعرّف إلى يسوع» سلسلةٌ من عشرة أفلامٍ قصيرة تعرّف ببشارة يسوع المسيح بلغةٍ بسيطة.</p>
+    <p>إعداد: <span class="signature" lang="en" dir="ltr">likeJesusJonas</span></p>
+  </div>
+</footer>
+
+<noscript>
+  <p style="margin:0;padding:1rem;background:#fbf3df;text-align:center;">لاستخدام البحث والتنقّل بين الحلقات، يُرجى تفعيل البرمجيات النصية في المتصفّح. يمكنك مع ذلك مشاهدة الحلقة الأولى في المشغّل.</p>
+</noscript>
 
 <script>
-(function(){
-  var slot=document.getElementById('slot'),pAr=document.getElementById('pAr'),pKo=document.getElementById('pKo'),cur=null;
-  function select(card){
-    if(cur===card)return;
-    if(cur){var v0=slot.querySelector('video');v0.pause();var b0=cur.querySelector('.vbox');b0.textContent='';b0.appendChild(v0);cur.classList.remove('on');cur.querySelector('button').textContent='플레이어에서 보기';}
-    var box=card.querySelector('.vbox'),v=box.querySelector('video');slot.textContent='';slot.appendChild(v);
-    box.innerHTML='<div class="slot" style="height:100%">위 플레이어에서 재생 중</div>';
-    card.classList.add('on');card.querySelector('button').textContent='선택됨';
-    pAr.textContent=card.querySelector('.ar').textContent;pKo.textContent='EP '+card.dataset.ep+' · '+card.querySelector('.ko').textContent;
-    cur=card;slot.scrollIntoView({behavior:'smooth',block:'center'});
+(function () {
+  'use strict';
+
+  var video = document.getElementById('player');
+  var playerSection = document.getElementById('player-section');
+  var playBtn = document.getElementById('play-btn');
+  var prevBtn = document.getElementById('prev-btn');
+  var nextBtn = document.getElementById('next-btn');
+  var retryBtn = document.getElementById('retry-btn');
+  var playHint = document.getElementById('play-hint');
+  var errorBox = document.getElementById('error-box');
+  var statusEl = document.getElementById('status');
+  var npCount = document.getElementById('np-count');
+  var npTitle = document.getElementById('np-title');
+  var npDesc = document.getElementById('np-desc');
+  var searchInput = document.getElementById('search-input');
+  var resultCount = document.getElementById('result-count');
+  var searchError = document.getElementById('search-error');
+  var noResults = document.getElementById('no-results');
+
+  var items = Array.prototype.slice.call(document.querySelectorAll('#episode-list > li'));
+  var buttons = items.map(function (li) { return li.querySelector('button[data-ep]'); });
+  var TOTAL = buttons.length;
+
+  var AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
+  function toArabicDigits(n) {
+    return String(n).replace(/[0-9]/g, function (d) { return AR_DIGITS.charAt(+d); });
   }
-  document.querySelectorAll('.card').forEach(function(c){c.querySelector('button').addEventListener('click',function(){select(c);});});
-  document.addEventListener('play',function(e){document.querySelectorAll('video').forEach(function(v){if(v!==e.target)v.pause();});},true);
+  function pad2(n) { return n < 10 ? '0' + n : String(n); }
+
+  // توحيد النص العربي للبحث: حذف التشكيل والتطويل وتوحيد أشكال الهمزة والألف والياء والتاء المربوطة والأرقام
+  function normalize(text) {
+    return String(text || '')
+      .replace(/[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06ED\u0640]/g, '')
+      .replace(/[\u0623\u0625\u0622\u0671]/g, '\u0627')
+      .replace(/\u0649/g, '\u064A')
+      .replace(/\u0624/g, '\u0648')
+      .replace(/\u0626/g, '\u064A')
+      .replace(/\u0629/g, '\u0647')
+      .replace(/[\u0660-\u0669]/g, function (d) { return String(d.charCodeAt(0) - 0x0660); })
+      .replace(/[\u06F0-\u06F9]/g, function (d) { return String(d.charCodeAt(0) - 0x06F0); })
+      .replace(/[«»"'،؛؟?!.,:\-–—()]/g, ' ')
+      .toLowerCase()
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  var episodes = buttons.map(function (btn) {
+    var n = parseInt(btn.getAttribute('data-ep'), 10);
+    var title = btn.querySelector('.card-title').textContent;
+    var desc = btn.querySelector('.card-desc').textContent;
+    var label = btn.querySelector('.ep-num').textContent;
+    return {
+      n: n,
+      title: title,
+      desc: desc,
+      src: 'media/EP' + pad2(n) + '.mp4',
+      poster: 'thumbnails/EP' + pad2(n) + '.jpg',
+      index: normalize(label + ' ' + n + ' ' + title + ' ' + desc)
+    };
+  });
+
+  var current = 1;
+  var playRequest = 0;
+
+  function setStatus(message) { statusEl.textContent = message; }
+  function hideHint() { playHint.hidden = true; }
+  function showHint() { playHint.hidden = false; }
+  function hideError() { errorBox.hidden = true; }
+  function showError() { errorBox.hidden = false; }
+
+  function setPlayLabel(playing) {
+    playBtn.textContent = playing ? 'إيقاف مؤقت' : 'تشغيل';
+  }
+
+  function attemptPlay() {
+    var request = ++playRequest;
+    hideHint();
+    var result;
+    try {
+      result = video.play();
+    } catch (err) {
+      showHint();
+      return;
+    }
+    if (result && typeof result.catch === 'function') {
+      result.catch(function (err) {
+        if (request !== playRequest) return;
+        if (err && err.name === 'AbortError') return;
+        if (video.error) return;
+        setPlayLabel(false);
+        showHint();
+      });
+    }
+  }
+
+  function updateNav() {
+    prevBtn.disabled = current <= 1;
+    nextBtn.disabled = current >= TOTAL;
+  }
+
+  function scrollToPlayerIfNeeded() {
+    var rect = playerSection.getBoundingClientRect();
+    if (rect.top >= 0 && rect.top < window.innerHeight * 0.5) return;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try {
+      playerSection.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    } catch (e) {
+      playerSection.scrollIntoView(true);
+    }
+  }
+
+  function selectEpisode(n, options) {
+    options = options || {};
+    n = Math.min(Math.max(n, 1), TOTAL);
+    var ep = episodes[n - 1];
+
+    if (n !== current) {
+      playRequest++;
+      video.pause();
+      hideHint();
+      hideError();
+      video.setAttribute('poster', ep.poster);
+      video.setAttribute('src', ep.src);
+      video.load();
+      setPlayLabel(false);
+      current = n;
+    }
+
+    buttons.forEach(function (btn, i) {
+      btn.setAttribute('aria-pressed', i === n - 1 ? 'true' : 'false');
+    });
+    npCount.textContent = 'الحلقة ' + toArabicDigits(n) + ' من ' + toArabicDigits(TOTAL);
+    npTitle.textContent = ep.title;
+    npDesc.textContent = ep.desc;
+    video.setAttribute('aria-label', 'الفيلم المعروض: ' + ep.title);
+    updateNav();
+
+    if (options.announce) {
+      setStatus('تم اختيار الحلقة ' + toArabicDigits(n) + ': ' + ep.title);
+    }
+    if (options.scroll) scrollToPlayerIfNeeded();
+    if (options.play) attemptPlay();
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var n = parseInt(btn.getAttribute('data-ep'), 10);
+      selectEpisode(n, { announce: true, scroll: true, play: true });
+    });
+  });
+
+  prevBtn.addEventListener('click', function () {
+    if (current > 1) selectEpisode(current - 1, { announce: true, play: true });
+  });
+  nextBtn.addEventListener('click', function () {
+    if (current < TOTAL) selectEpisode(current + 1, { announce: true, play: true });
+  });
+
+  playBtn.addEventListener('click', function () {
+    if (video.paused || video.ended) {
+      attemptPlay();
+    } else {
+      video.pause();
+    }
+  });
+
+  retryBtn.addEventListener('click', function () {
+    hideError();
+    hideHint();
+    setStatus('جارٍ إعادة تحميل الحلقة…');
+    video.load();
+    attemptPlay();
+  });
+
+  video.addEventListener('play', function () { setPlayLabel(true); hideHint(); });
+  video.addEventListener('playing', function () { hideHint(); hideError(); });
+  video.addEventListener('pause', function () { setPlayLabel(false); });
+  video.addEventListener('ended', function () { setPlayLabel(false); });
+  video.addEventListener('error', function () {
+    if (!video.getAttribute('src')) return;
+    setPlayLabel(false);
+    hideHint();
+    showError();
+  });
+
+  function filterEpisodes() {
+    try {
+      searchError.hidden = true;
+      var query = normalize(searchInput.value);
+      var terms = query ? query.split(' ') : [];
+      var shown = 0;
+
+      items.forEach(function (li, i) {
+        var text = episodes[i].index;
+        var match = terms.every(function (t) { return text.indexOf(t) !== -1; });
+        li.hidden = !match;
+        if (match) shown++;
+      });
+
+      if (!terms.length) {
+        resultCount.textContent = 'تُعرض جميع الحلقات (' + toArabicDigits(TOTAL) + ')';
+      } else {
+        resultCount.textContent = 'عدد النتائج: ' + toArabicDigits(shown) + ' من ' + toArabicDigits(TOTAL);
+      }
+      noResults.hidden = shown !== 0;
+    } catch (err) {
+      items.forEach(function (li) { li.hidden = false; });
+      noResults.hidden = true;
+      resultCount.textContent = 'تُعرض جميع الحلقات (' + toArabicDigits(TOTAL) + ')';
+      searchError.hidden = false;
+    }
+  }
+
+  searchInput.addEventListener('input', filterEpisodes);
+  searchInput.addEventListener('search', filterEpisodes);
+  searchInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && searchInput.value) {
+      searchInput.value = '';
+      filterEpisodes();
+    }
+  });
+
+  // الحالة الأولية: الحلقة الأولى مختارة دون تشغيل تلقائي ودون تمرير
+  selectEpisode(1, {});
+  setPlayLabel(false);
+  filterEpisodes();
 })();
 </script>
 </body>
