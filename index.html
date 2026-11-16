@@ -4,43 +4,42 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="عشرة أفلامٍ قصيرة تتناول أسئلةً صادقة عن يسوع والإيمان المسيحي: الميلاد والكنيسة والخطيئة والصليب والقيامة والصلاة والألم.">
-<meta name="theme-color" content="#14213d">
+<meta name="theme-color" content="#f6f1e7">
 <title>تعرّف إلى يسوع | عشرة أفلامٍ قصيرة</title>
 <style>
+
   :root {
-    --navy: #14213d;
-    --navy-2: #1f3160;
-    --gold: #b8892b;
-    --gold-light: #e3c27a;
-    --gold-ink: #7a5a14;
-    --paper: #f7f3ea;
-    --card: #fffdf8;
-    --ink: #1d2433;
-    --muted: #4f5869;
-    --line: #e2d9c5;
-    --danger: #a3261d;
-    --danger-bg: #fbeceb;
-    --radius: 12px;
+    --cream: #f6f1e7;
+    --cream-2: #efe7d8;
+    --paper: #fbf8f2;
+    --charcoal: #2a2826;
+    --charcoal-2: #45413d;
+    --muted: #6b645c;
+    --line: #d9cfbe;
+    --accent: #8a5a2b;
+    --focus: #1f5fbf;
+    --err-bg: #f3e2d6;
+    --err-ink: #5a2e14;
+    --radius: 10px;
+    --sans: 'Geeza Pro', Tahoma, Arial, sans-serif;
+    --serif: 'Noto Naskh Arabic', 'Geeza Pro', 'Traditional Arabic', serif;
   }
   *, *::before, *::after { box-sizing: border-box; }
   [hidden] { display: none !important; }
   html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   body {
     margin: 0;
-    font-family: "Geeza Pro", Tahoma, Arial, sans-serif;
-    font-size: 1rem;
+    font-family: var(--sans);
+    font-size: 16px;
     line-height: 1.8;
-    color: var(--ink);
-    background: var(--paper);
+    color: var(--charcoal);
+    background: var(--cream);
+    overflow-x: hidden;
     overflow-wrap: anywhere;
   }
   img, video { max-width: 100%; display: block; }
   button, input { font: inherit; }
-  :focus-visible {
-    outline: 3px solid var(--navy);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 6px var(--gold-light);
-  }
+  :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
   .visually-hidden {
     position: absolute !important;
     width: 1px; height: 1px;
@@ -50,181 +49,190 @@
   }
   .skip-link {
     position: absolute;
-    inset-inline-start: 1rem;
-    top: -100px;
+    inset-inline-start: -9999px;
+    top: 0;
     z-index: 10;
-    padding: .6rem 1rem;
+    padding: 12px 16px;
     min-height: 44px;
-    background: var(--gold-light);
-    color: var(--navy);
+    background: var(--charcoal);
+    color: var(--paper);
     font-weight: 700;
-    border-radius: 8px;
     text-decoration: none;
   }
-  .skip-link:focus { top: 1rem; }
+  .skip-link:focus { inset-inline-start: 8px; top: 8px; }
   .wrap {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 16px;
   }
 
   /* الترويسة */
-  .site-header {
-    background: var(--navy);
-    color: #fff;
-    border-bottom: 4px solid var(--gold);
-    padding: 1.75rem 0 1.5rem;
+  .site-header { padding-top: 20px; background: var(--cream); color: var(--charcoal); }
+  .site-header .wrap::after {
+    content: '';
+    display: block;
+    margin-top: 16px;
+    border-bottom: 2px solid var(--charcoal);
   }
   .site-header .kicker {
-    margin: 0 0 .25rem;
-    color: var(--gold-light);
-    font-size: .95rem;
-    font-weight: 700;
+    margin: 0 0 4px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    font-weight: 400;
   }
   .site-header h1 {
-    margin: 0 0 .5rem;
-    font-size: clamp(1.6rem, 6vw, 2.3rem);
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 700;
+    font-size: clamp(1.6rem, 5vw, 2.3rem);
     line-height: 1.4;
   }
   .site-header .intro {
-    margin: 0;
-    max-width: 60ch;
-    color: #e9edf5;
+    margin: 8px 0 0;
+    max-width: 46em;
+    color: var(--charcoal-2);
+    font-size: 0.98rem;
   }
 
-  main { padding: 1.25rem 0 2rem; }
+  main { padding: 20px 0 0; }
+  main .wrap {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
 
   /* المشغّل */
-  .player-section { scroll-margin-top: .75rem; }
+  .player-section {
+    min-width: 0;
+    padding: 16px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    scroll-margin-top: 16px;
+  }
+  .player-grid { display: block; }
   .frame {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #000;
-    border-radius: var(--radius);
+    width: min(100%, calc(65vh * 9 / 16));
+    aspect-ratio: 9 / 16;
+    max-height: 65vh;
+    margin: 0 auto;
+    background: var(--charcoal);
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 6px 20px rgba(20, 33, 61, .18);
   }
-  @supports not (aspect-ratio: 16 / 9) {
-    .frame { height: 0; padding-top: 56.25%; }
+  @supports not (aspect-ratio: 9 / 16) {
+    .frame { height: 0; padding-top: 177.78%; max-height: none; }
   }
   .frame video {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
+    max-height: 65vh;
     object-fit: contain;
-    background: #000;
+    background: var(--charcoal);
   }
   .controls {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: .5rem;
-    margin-top: .75rem;
+    gap: 10px;
+    margin-top: 14px;
   }
   .btn {
-    min-height: 44px;
     min-width: 44px;
-    padding: .45rem .6rem;
-    border: 1.5px solid var(--navy);
-    border-radius: 10px;
-    background: var(--card);
-    color: var(--navy);
+    min-height: 44px;
+    padding: 10px 14px;
     font-weight: 700;
+    font-size: 0.95rem;
     line-height: 1.35;
+    color: var(--paper);
+    background: var(--charcoal);
+    border: 2px solid var(--charcoal);
+    border-radius: 8px;
     cursor: pointer;
     white-space: normal;
   }
-  .btn:hover:not(:disabled) { background: #efe8d6; }
-  .btn-primary {
-    background: var(--navy);
-    color: #fff;
-  }
-  .btn-primary:hover:not(:disabled) { background: var(--navy-2); }
-  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .btn:hover:not(:disabled) { background: var(--charcoal-2); border-color: var(--charcoal-2); }
+  .btn-primary { background: var(--accent); border-color: var(--accent); }
+  .btn-primary:hover:not(:disabled) { background: #74491f; border-color: #74491f; }
+  .btn:disabled { background: transparent; color: var(--muted); border-color: var(--line); cursor: not-allowed; }
 
   .notice {
-    margin-top: .75rem;
-    padding: .75rem 1rem;
-    border-radius: 10px;
-    border: 1px solid var(--gold);
-    background: #fbf3df;
-    color: var(--ink);
+    margin: 10px 0 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--line);
+    border-inline-start: 4px solid var(--accent);
+    background: var(--cream-2);
+    color: var(--charcoal-2);
+    font-size: 0.92rem;
   }
   .notice p { margin: 0; }
   .error-box {
-    margin-top: .75rem;
-    padding: .85rem 1rem;
-    border-radius: 10px;
-    border: 1px solid var(--danger);
-    background: var(--danger-bg);
-    color: #3d0f0b;
+    margin: 10px 0 0;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: var(--err-bg);
+    color: var(--err-ink);
+    font-size: 0.92rem;
   }
-  .error-box p { margin: 0 0 .6rem; }
+  .error-box p { margin: 0 0 8px; }
 
-  .now-playing {
-    margin-top: 1rem;
-    padding: 1rem 1.1rem;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-inline-start: 4px solid var(--gold);
-    border-radius: var(--radius);
-  }
+  .now-playing { margin-top: 14px; min-width: 0; }
   .now-playing .label {
     margin: 0;
-    font-size: .9rem;
+    font-size: 0.85rem;
     font-weight: 700;
-    color: var(--gold-ink);
+    color: var(--accent);
   }
   .now-playing h2 {
-    margin: .15rem 0 .35rem;
-    font-size: clamp(1.2rem, 4.8vw, 1.5rem);
+    margin: 2px 0 0;
+    font-family: var(--serif);
+    font-size: 1.3rem;
     line-height: 1.5;
-    color: var(--navy);
+    color: var(--charcoal);
   }
-  .now-playing p.desc { margin: 0; color: var(--ink); }
+  .now-playing p.desc { margin: 8px 0 0; color: var(--charcoal-2); }
 
   /* القائمة والبحث */
-  .episodes-section { margin-top: 2rem; }
+  .episodes-section { min-width: 0; margin: 0; }
   .section-title {
-    margin: 0 0 .25rem;
-    font-size: 1.35rem;
-    color: var(--navy);
-  }
-  .instructions { margin: 0 0 1rem; color: var(--muted); }
-  .search {
-    padding: 1rem;
-    background: var(--card);
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    margin-bottom: 1rem;
-  }
-  .search label {
-    display: block;
+    margin: 0 0 4px;
+    font-size: 0.82rem;
     font-weight: 700;
-    color: var(--navy);
-    margin-bottom: .35rem;
+    color: var(--muted);
   }
+  .instructions { margin: 0 0 12px; color: var(--charcoal-2); font-size: 0.93rem; }
+  .search {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .search label { font-weight: 700; font-size: 0.92rem; color: var(--charcoal); }
   .search input {
     width: 100%;
-    min-height: 48px;
-    padding: .5rem .85rem;
-    border: 1.5px solid #b9b19f;
-    border-radius: 10px;
-    background: #fff;
-    color: var(--ink);
+    min-width: 0;
+    min-height: 44px;
+    padding: 10px 12px;
+    color: var(--charcoal);
+    background: var(--paper);
+    border: 2px solid var(--line);
+    border-radius: 8px;
   }
-  .search input:focus-visible { border-color: var(--navy); }
-  .search .hint { margin: .4rem 0 0; font-size: .9rem; color: var(--muted); }
-  .result-count { margin: .5rem 0 0; font-weight: 700; color: var(--navy); }
-  .search-error { margin: .5rem 0 0; color: var(--danger); font-weight: 700; }
+  .search input:focus { border-color: var(--charcoal); }
+  .search .hint { margin: 0; font-size: 0.88rem; color: var(--muted); }
+  .result-count { margin: 0 0 10px; color: var(--muted); font-size: 0.88rem; }
+  .search-error { margin: 0; padding: 10px 12px; border-radius: 8px; background: var(--err-bg); color: var(--err-ink); font-size: 0.92rem; font-weight: 700; }
   .no-results {
-    padding: 1rem;
-    border: 1px dashed var(--gold);
+    margin: 0 0 10px;
+    padding: 20px;
+    text-align: center;
+    color: var(--muted);
+    border: 1px dashed var(--line);
     border-radius: var(--radius);
-    background: #fbf3df;
-    margin: 0 0 1rem;
   }
 
   .episode-list {
@@ -232,102 +240,106 @@
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
-    gap: 1rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
   }
   .episode-list > li { min-width: 0; }
   .card {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
     width: 100%;
-    height: 100%;
     min-height: 44px;
-    padding: 0;
+    padding: 10px;
     text-align: start;
-    background: var(--card);
-    color: var(--ink);
-    border: 1.5px solid var(--line);
+    color: inherit;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-inline-start: 4px solid transparent;
     border-radius: var(--radius);
-    overflow: hidden;
     cursor: pointer;
-    transition: border-color .15s ease, box-shadow .15s ease;
   }
-  .card:hover { border-color: var(--gold); }
-  .card[aria-pressed="true"] {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 2px var(--gold), 0 6px 16px rgba(20, 33, 61, .14);
+  .card:hover { background: var(--cream-2); }
+  .card[aria-pressed='true'] {
+    border-color: var(--charcoal);
+    border-inline-start-color: var(--accent);
+    background: var(--cream-2);
   }
   .card .thumb-wrap {
     position: relative;
     display: block;
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    background: var(--navy);
+    width: 72px;
+    aspect-ratio: 9 / 16;
+    background: var(--charcoal);
+    border-radius: 6px;
+    overflow: hidden;
   }
   .card .thumb {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
   }
-  .card .badge {
-    display: none;
-    position: absolute;
-    top: .5rem;
-    inset-inline-start: .5rem;
-    padding: .1rem .6rem;
-    border-radius: 999px;
-    background: var(--gold-light);
-    color: var(--navy);
-    font-size: .85rem;
-    font-weight: 700;
-  }
-  .card[aria-pressed="true"] .badge { display: inline-block; }
-  .card .body { display: block; padding: .75rem .9rem 1rem; }
+  .card .badge { display: none; }
+  .card .body { display: block; min-width: 0; }
   .card .ep-num {
     display: block;
-    font-size: .88rem;
+    font-size: 0.82rem;
     font-weight: 700;
-    color: var(--gold-ink);
+    color: var(--accent);
   }
   .card .card-title {
     display: block;
-    margin: .1rem 0 .35rem;
-    font-size: 1.08rem;
+    margin-top: 2px;
+    font-family: var(--serif);
+    font-size: 1.05rem;
     font-weight: 700;
-    line-height: 1.55;
-    color: var(--navy);
+    line-height: 1.5;
+    color: var(--charcoal);
   }
   .card .card-desc {
     display: block;
-    font-size: .95rem;
-    line-height: 1.75;
+    margin-top: 4px;
+    font-size: 0.9rem;
     color: var(--muted);
   }
 
   .site-footer {
-    background: var(--navy);
-    color: #e9edf5;
-    border-top: 4px solid var(--gold);
-    padding: 1.25rem 0;
-    text-align: center;
+    margin-top: 32px;
+    padding: 0 0 48px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-align: start;
   }
-  .site-footer p { margin: .2rem 0; }
-  .site-footer .signature { color: var(--gold-light); font-weight: 700; }
+  .site-footer .wrap::before {
+    content: '';
+    display: block;
+    margin-bottom: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .site-footer p { margin: 0; }
 
   @media (min-width: 900px) {
-    .player-grid {
-      display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr);
-      gap: 1.25rem;
+    main .wrap {
+      grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
       align-items: start;
     }
-    .now-playing { margin-top: 0; }
+    .player-section { position: sticky; top: 16px; }
+  }
+  @media (max-width: 420px) {
+    .wrap { padding: 0 12px; }
+    .site-header { padding-top: 16px; }
+    .site-footer { padding-bottom: 40px; }
+    .player-section { padding: 12px; }
+    .card { grid-template-columns: 56px minmax(0, 1fr); gap: 10px; }
+    .card .thumb-wrap { width: 56px; }
   }
   @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; scroll-behavior: auto !important; }
   }
+
 </style>
 </head>
 <body>
@@ -504,7 +516,6 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>«تعرّف إلى يسوع» سلسلةٌ من عشرة أفلامٍ قصيرة تعرّف ببشارة يسوع المسيح بلغةٍ بسيطة.</p>
-    <p>إعداد: <span class="signature" lang="en" dir="ltr">likeJesusJonas</span></p>
   </div>
 </footer>
 
@@ -661,15 +672,15 @@
   buttons.forEach(function (btn) {
     btn.addEventListener('click', function () {
       var n = parseInt(btn.getAttribute('data-ep'), 10);
-      selectEpisode(n, { announce: true, scroll: true, play: true });
+      selectEpisode(n, { announce: true, scroll: false, play: false });
     });
   });
 
   prevBtn.addEventListener('click', function () {
-    if (current > 1) selectEpisode(current - 1, { announce: true, play: true });
+    if (current > 1) selectEpisode(current - 1, { announce: true, scroll: false, play: false });
   });
   nextBtn.addEventListener('click', function () {
-    if (current < TOTAL) selectEpisode(current + 1, { announce: true, play: true });
+    if (current < TOTAL) selectEpisode(current + 1, { announce: true, scroll: false, play: false });
   });
 
   playBtn.addEventListener('click', function () {
